@@ -6,8 +6,8 @@ Version:          1.7.0.0
 Release:          1
 Summary:          R functions for NetWorkSpaces and Sleigh
 Group:            Sciences/Mathematics
-License:          GPL Version 2 or later.
-URL:              None
+License:          GPL Version 2 or later
+URL:              http://cran.r-project.org/web/packages/nws/index.html
 Source0:          http://cran.r-project.org/src/contrib/Archive/nws/nws_1.7.0.0.tar.gz
 BuildArch:        noarch
 Requires:         R-core
