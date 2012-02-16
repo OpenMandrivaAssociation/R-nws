@@ -2,13 +2,13 @@
 %global rlibdir  %{_datadir}/R/library
 
 Name:             R-%{packname}
-Version:          1.7.0.0
+Version:          1.7.0.1
 Release:          1
 Summary:          R functions for NetWorkSpaces and Sleigh
 Group:            Sciences/Mathematics
-License:          GPL Version 2 or later
-URL:              http://cran.r-project.org/web/packages/nws/index.html
-Source0:          http://cran.r-project.org/src/contrib/Archive/nws/nws_1.7.0.0.tar.gz
+License:          GPL (>= 2)
+URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
+Source0:          http://cran.r-project.org/src/contrib/%{packname}_%{version}.tar.gz
 BuildArch:        noarch
 Requires:         R-core
 Requires:         R-methods 
@@ -17,7 +17,7 @@ BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-methods
 %description
 Provides coordination and parallel execution facilities, as well as
 limited cross-language data exchange, using the netWorkSpaces server
-developed by REvolution Computing.
+developed by REvolution Computing
 
 %prep
 %setup -q -c -n %{packname}
@@ -25,7 +25,6 @@ developed by REvolution Computing.
 %build
 
 %install
-rm -rf %{buildroot}
 mkdir -p %{buildroot}%{rlibdir}
 %{_bindir}/R CMD INSTALL -l %{buildroot}%{rlibdir} %{packname}
 test -d %{packname}/src && (cd %{packname}/src; rm -f *.o *.so)
